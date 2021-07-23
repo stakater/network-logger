@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    pod: pod-b
+  name: pod-b-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      pod: pod-b
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        pod: pod-b
+    spec:
+      containers:
+      - image: network-logger:latest
+        name: pod-b-app
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5000
+        resources: {}
