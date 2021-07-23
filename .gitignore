@@ -127,6 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+<<<<<<< HEAD
 
 
 # Created by https://www.toptal.com/developers/gitignore/api/pycharm+all
@@ -229,3 +230,4 @@ modules.xml
 # network-logger
 venv3.7
 cmds.txt
+
