@@ -16,7 +16,7 @@ spec:
         pod: pod-b
     spec:
       containers:
-      - image: network-logger:latest
+      - image: stakater/network-logger
         name: pod-b-app
         env:
           - name: APP_PORT

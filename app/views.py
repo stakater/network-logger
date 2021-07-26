@@ -18,7 +18,7 @@ def get_pod_a():
         log.info("POD-A, args: %s", args)
         pod_b_route = os.environ.get("POD_B_ROUTE")
         log.info("POD-A, POD_B_ROUTE: %s", pod_b_route)
-        pod_b_route = f"{pod_b_route}/pod/b"
+        pod_b_route = f"http://{pod_b_route}/pod/b"
 
         query_string = ""
         if args:
