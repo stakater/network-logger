@@ -3,12 +3,14 @@ kind: Service
 metadata:
   labels:
     pod: pod-a
-  name: pod-a-app
+  name: pod-a-service
 spec:
   ports:
   - port: 5000
-    protocol: TCP
     targetPort: 5000
+    nodePort: 31704
+    name: http
+    protocol: TCP
   selector:
     pod: pod-a
   type: NodePort

@@ -18,7 +18,10 @@ spec:
       containers:
       - image: network-logger:latest
         name: pod-b-app
-        imagePullPolicy: Never
+        env:
+          - name: APP_PORT
+            value: "6000"
+        imagePullPolicy: Always
         ports:
-        - containerPort: 5000
+        - containerPort: 6000
         resources: {}
