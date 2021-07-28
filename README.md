@@ -39,7 +39,7 @@ network-logger$ curl pod-b-route-network-logger-pod-b.apps.binero-test.8sdzwd1l.
 
 ```
 
-4. Update `POD_B_ROUTE` env in `pod-a`'s deployment(pod-a-deployment.yml) env with `pod-b-route` generated above.
+4. Update `POD_B_ROUTE` env in `pod-a`'s deployment(pod-a-deployment.yml) with `pod-b-route` generated above.
 ```yaml
         name: pod-a-app
         env:
