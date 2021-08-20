@@ -19,6 +19,7 @@ spec:
       - image: stakater/network-logger
         name: pod-b-app
         env:
+          - HTTPS: "true"
           - name: APP_PORT
             value: "6000"
         imagePullPolicy: Always
