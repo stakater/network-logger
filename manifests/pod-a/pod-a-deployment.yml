@@ -19,7 +19,6 @@ spec:
       - image: stakater/network-logger
         name: pod-a-app
         env:
-          - HTTPS: "true"
           - name: APP_PORT
             value: "5000"
           - name: POD_B_ROUTE
