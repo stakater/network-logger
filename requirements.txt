@@ -1,3 +1,4 @@
 Flask
 requests
 pyOpenSSL==20.0.1
+python-json-logger
