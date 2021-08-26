@@ -32,8 +32,8 @@ def get_pod_a():
         log.info({"sender": "pod-A", "podBResponse": resp.json(), "statusCode": resp.status_code})
         return jsonify({"sender": "POD-A", "response": resp.json()["response"]})
     except Exception as e:
-        log.error("POD-A, Error calling pod B : %s", traceback.format_exc())
-        return jsonify({"sender": "POD-A", "Error": str(e)})
+        log.error({"sender": "pod-A", "error": str(e)})
+        return jsonify({"sender": "POD-A", "error": str(e)})
 
 
 @nlapp.route("/pod/b", methods=['GET'])
@@ -45,6 +45,6 @@ def get_pod_b():
         log.info({"receiver": "pod-B", "args": args})
         return jsonify({"receiver": "POD-B", "response": args})
     except Exception as e:
-        log.error("POD-B, Error: %s", traceback.format_exc())
-        return jsonify({"receiver": "POD-B", "Error": str(e)})
+        log.error({"receiver": "pod-B", "error": str(e)})
+        return jsonify({"receiver": "POD-B", "error": str(e)})
 

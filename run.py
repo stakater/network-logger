@@ -1,10 +1,6 @@
 import os
 from app.nl_app import nlapp
 
-import logging
-log = logging.getLogger('werkzeug')
-log.setLevel(logging.ERROR)
-
 
 port = os.environ.get("APP_PORT")
 https = os.environ.get("HTTPS")
